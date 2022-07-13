@@ -9,9 +9,7 @@ if (empCheck == IS_FULL_TIME)
 }
 else
 {
-
     Console.WriteLine("Employee is absent");
-
 }
 
 
