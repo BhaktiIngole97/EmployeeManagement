@@ -15,6 +15,8 @@ while (totalEmpHrs <= MAX_HRS_IN_MONTH && totalWorkingDays < NUM_OF_WORKING_DAYS
     int empCheck = random.Next(0, 3);
     switch (empCheck)
     {
+
+    
         case IS_PART_TIME:
             empHrs = 4;
             break;
@@ -30,6 +32,8 @@ while (totalEmpHrs <= MAX_HRS_IN_MONTH && totalWorkingDays < NUM_OF_WORKING_DAYS
 }
 int totalEmpWage = totalEmpHrs * EMP_RATE_PER_HOUR;
 Console.WriteLine("Total Emp Wage : " + totalEmpWage);
+return totalEmpWage;
+
 
 
 
