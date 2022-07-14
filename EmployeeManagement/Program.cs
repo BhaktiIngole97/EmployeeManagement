@@ -1,43 +1,9 @@
-﻿// See https://aka.ms/new-console-template for more information
-//Constants
- const int IS_PART_TIME = 1;
- const int IS_FULL_TIME = 2;
- static int computeEmpWage(string company, int empRatePerHour, int numOfWorkingDays, int maxHoursPerMonth)
-//Variable
-{
-    int empHrs = 0, totalEmpHrs = 0, totalWorkingDays = 0;
-    //Computation
-    while (totalEmpHrs <= maxHoursPerMonth && totalWorkingDays < numOfWorkingDays)
-    {
-        totalWorkingDays++;
-        Random random = new Random();
-        int empCheck = random.Next(0, 3);
-        switch (empCheck)
-        {
-
-
-            case IS_PART_TIME:
-                empHrs = 4;
-                break;
-            case IS_FULL_TIME:
-                empHrs = 8;
-                break;
-            default:
-                empHrs = 0;
-                break;
-        }
-        totalEmpHrs += empHrs;
-        Console.WriteLine("Days#:" + totalWorkingDays + " Emp Hrs :" + empHrs);
-    }
-    int totalEmpWage = totalEmpHrs * empRatePerHour;
-    Console.WriteLine("Total Emp Wage for company : " + company + " is: " + totalEmpWage);
-    return totalEmpWage;
-}
-
-    computeEmpWage("DMart", 20, 2, 10);
-    computeEmpWage("Reliance", 10, 4, 20);
-
-
-
+﻿using EmployeeManagement;
+EmpWageBuilderobject dMart = new EmpWageBuilderobject("Dmart", 20, 2, 10);
+EmpWageBuilderobject reliance = new EmpWageBuilderobject("Reliance", 10, 4, 20);
+dMart.computeEmpWage();
+Console.WriteLine(dMart.toString());
+reliance.computeEmpWage();
+Console.WriteLine(reliance.toString());
 
 
